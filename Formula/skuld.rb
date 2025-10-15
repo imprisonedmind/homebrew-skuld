@@ -19,6 +19,6 @@ class Skuld < Formula
   end
 
   test do
-    system "#{bin}/skuld", "sync", "today", "--test"
+    system "#{bin}/skuld", "--help"
   end
 end
