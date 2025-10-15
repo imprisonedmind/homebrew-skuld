@@ -1,6 +1,6 @@
 # homebrew-skuld (Skuld Tap)
 
-This is the public Homebrew tap for the Skuld CLI.
+This is the public Homebrew tap for the Skuld CLI (macOS preferred).
 
 - Install:
   - `brew tap imprisonedmind/skuld`
@@ -12,6 +12,10 @@ Notes
 - The formula depends on Homebrew `python` and wraps `python3 -m skuld.cli`.
 - The CLI requires a per‑repo mapping before `sync`:
   - In each repo you want to sync: `skuld add`
+
+Linux users
+- Prefer the npm package instead of this tap: `npm install -g skuld-cli`.
+- The npm package provides the same `skuld` command and uses a Node shim to run Python.
 
 Linux install (npm)
 - Pre-reqs: Node.js/npm and Python 3 installed on your system.
@@ -33,6 +37,7 @@ Maintainers (bump release)
 
 Linux release (npm)
 - Ensure you have publish rights to npm and are logged in (`npm login`) or have `NPM_TOKEN` configured.
-- From the monorepo root, use the release script with npm publish enabled:
-  - `SKULD_NPM_PUBLISH=1 ./release.sh [patch|minor|major|X.Y.Z]`
-- This bumps `skuld-cli/package.json`, tags and pushes the repo, and publishes `skuld-cli` to npm.
+- The release script publishes to npm by default alongside the Homebrew tap update:
+  - `./release.sh [patch|minor|major|X.Y.Z]`
+- To skip npm publish, set `SKULD_NPM_PUBLISH=0`.
+- The script bumps `skuld-cli/package.json`, tags and pushes the repo, publishes `skuld-cli` to npm, and updates the tap.
