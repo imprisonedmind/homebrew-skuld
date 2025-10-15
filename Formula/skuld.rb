@@ -1,8 +1,8 @@
 class Skuld < Formula
   desc "Skuld: WakaTime + Git → Jira worklogs"
   homepage "https://github.com/imprisonedmind/skuld"
-  url "https://github.com/imprisonedmind/skuld/archive/refs/tags/v0.1.8.tar.gz"
-  sha256 "52f4a8863d95ffee087068feb42c8343d600f2430a03cb2494304417a7f66f17"
+  url "https://github.com/imprisonedmind/skuld/archive/refs/tags/v0.1.9.tar.gz"
+  sha256 "7e700960e23d5dfda790b7747a237cca716031c7c8e54265ecb8ce6f02689258"
   license "mit"
   head "https://github.com/imprisonedmind/skuld.git", branch: "main"
 
