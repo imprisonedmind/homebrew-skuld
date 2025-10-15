@@ -3,7 +3,7 @@ class Skuld < Formula
   homepage "https://github.com/imprisonedmind/skuld"
   url "https://github.com/imprisonedmind/skuld/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "359d43fba089ef89043c12aa0dce4de8f07ab1158829cabc88b223bd93626af6"
-  license :cannot_represent
+  license "mit"
   head "https://github.com/imprisonedmind/skuld.git", branch: "main"
 
   depends_on "python"
