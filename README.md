@@ -10,8 +10,12 @@ This is the public Homebrew tap for the Skuld CLI (macOS preferred).
 
 Notes
 - The formula depends on Homebrew `python` and wraps `python3 -m skuld.cli`.
-- The CLI requires a per‑repo mapping before `sync`:
-  - In each repo you want to sync: `skuld add`
+- Getting started:
+  - Run `skuld` with no arguments to see a quick usage guide.
+  - Map the current repo to a WakaTime project (required): `skuld add` (run inside each repo you want to sync)
+  - Default incremental sync (since last successful sync): `skuld sync` (add `--test` for a dry-run)
+  - Explicit periods are still supported: `skuld sync today | yesterday | week`
+  - By default Skuld only posts worklogs (no separate issue comments). To enable comments, set `comment.issueCommentsEnabled: true` in `~/.skuld.yaml`.
 
 Linux users
 - Prefer the npm package instead of this tap: `npm install -g skuld-cli`.
